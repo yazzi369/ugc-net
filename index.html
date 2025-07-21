@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UGC NET JRF Home Science Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="motivational-banner">
+                <h1>✨ Your Journey to UGC NET Success ✨</h1>
+                <p class="quote">"Every small step today builds your tomorrow's confidence"</p>
+            </div>
+            <div class="progress-overview">
+                <div class="exam-countdown">
+                    <div class="countdown-box">
+                        <span class="countdown-number" id="daysUntilExam">147</span>
+                        <span class="countdown-label">Days Until Exam</span>
+                    </div>
+                </div>
+                <div class="overall-progress">
+                    <div class="progress-circle" id="overallProgress">
+                        <span class="progress-percentage">12%</span>
+                    </div>
+                    <span class="progress-label">Overall Progress</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="study-nav">
+            <button class="nav-btn active" data-section="phases">Study Phases</button>
+            <button class="nav-btn" data-section="progress">Unit Progress</button>
+            <button class="nav-btn" data-section="timer">Study Timer</button>
+            <button class="nav-btn" data-section="motivation">Motivation</button>
+            <button class="nav-btn" data-section="mocks">Mock Tests</button>
+        </nav>
+
+        <!-- Phase-Based Study Plan -->
+        <section id="phases" class="section active">
+            <h2>📚 Study Phases Overview</h2>
+            <div class="phases-grid">
+                <div class="phase-card" style="border-left: 4px solid #10B981;">
+                    <h3>Phase 1: Foundation Building</h3>
+                    <p class="phase-weeks">Weeks 1-4</p>
+                    <p class="phase-goal">Solidify basics & plug skipped gaps</p>
+                    <div class="phase-time">📅 2h weekdays, 4h Sunday</div>
+                </div>
+                <div class="phase-card" style="border-left: 4px solid #3B82F6;">
+                    <h3>Phase 2: Comprehensive Coverage</h3>
+                    <p class="phase-weeks">Weeks 5-12</p>
+                    <p class="phase-goal">March through 10 units with Paper 1</p>
+                    <div class="phase-time">📅 2h weekdays, 4h Sunday</div>
+                </div>
+                <div class="phase-card" style="border-left: 4px solid #F59E0B;">
+                    <h3>Phase 3: Integration & Practice</h3>
+                    <p class="phase-weeks">Weeks 13-16</p>
+                    <p class="phase-goal">Convert knowledge to speed & accuracy</p>
+                    <div class="phase-time">📅 2h weekdays, 4h Sunday</div>
+                </div>
+                <div class="phase-card" style="border-left: 4px solid #EF4444;">
+                    <h3>Phase 4: Final Revision</h3>
+                    <p class="phase-weeks">Weeks 17-20</p>
+                    <p class="phase-goal">Rapid revision & confidence building</p>
+                    <div class="phase-time">📅 2h weekdays, 4h Sunday</div>
+                </div>
+            </div>
+
+            <!-- Weekly Study Plan -->
+            <div class="weekly-plan">
+                <h3>📋 Weekly Study Schedule</h3>
+                <div class="weeks-container" id="weeksContainer">
+                    <!-- Week 1 -->
+                    <div class="week-card">
+                        <div class="week-header" onclick="toggleWeek(1)">
+                            <h4>Week 1: Food Science & Nutrition Basics</h4>
+                            <span class="week-progress">3/7 days</span>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="week-content" id="week1">
+                            <div class="day-item">
+                                <input type="checkbox" id="w1d1" class="day-checkbox">
+                                <label for="w1d1">
+                                    <strong>Day 1:</strong> Food Sci Ch 1: Water activity & food spoilage + 15 MCQs <span class="priority high">🟢</span>
+                                    <small>2 hours</small>
+                                </label>
+                            </div>
+                            <div class="day-item">
+                                <input type="checkbox" id="w1d2" class="day-checkbox">
+                                <label for="w1d2">
+                                    <strong>Day 2:</strong> Food Sci Ch 2: Caramelisation vs Maillard + Practice Q <span class="priority high">🟢</span>
+                                    <small>2 hours</small>
+                                </label>
+                            </div>
+                            <div class="day-item">
+                                <input type="checkbox" id="w1d3" class="day-checkbox">
+                                <label for="w1d3">
+                                    <strong>Day 3:</strong> Nutrition Ch 1: RDA vs EAR tables + Calculations <span class="priority high">🟢</span>
+                                    <small>2 hours</small>
+                                </label>
+                            </div>
+                            <div class="day-item">
+                                <input type="checkbox" id="w1d4" class="day-checkbox">
+                                <label for="w1d4">
+                                    <strong>Day 4:</strong> Nutrition Ch 2: Fat-soluble vitamins + Case studies <span class="priority high">🟢</span>
+                                    <small>2 hours</small>
+                                </label>
+                            </div>
+                            <div class="day-item">
+                                <input type="checkbox" id="w1d5" class="day-checkbox">
+                                <label for="w1d5">
+                                    <strong>Day 5:</strong> Family Studies intro: Marriage forms + MCQs <span class="priority medium">🟡</span>
+                                    <small>2 hours</small>
+                                </label>
+                            </div>
+                            <div class="day-item">
+                                <input type="checkbox" id="w1d6" class="day-checkbox">
+                                <label for="w1d6">
+                                    <strong>Day 6:</strong> Paper 1 Teaching: Learner characteristics + PYQs <span class="priority high">🟢</span>
+                                    <small>2 hours</small>
+                                </label>
+                            </div>
+                            <div class="day-item">
+                                <input type="checkbox" id="w1d7" class="day-checkbox">
+                                <label for="w1d7">
+                                    <strong>Day 7:</strong> Concept mapping Units 1&2 + PYQ 2023-2024 + Reflection <span class="priority high">🟢</span>
+                                    <small>4 hours</small>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Week 2 -->
+                    <div class="week-card">
+                        <div class="week-header" onclick="toggleWeek(2)">
+                            <h4>Week 2: Continue Units 1&2 + Family Studies</h4>
+                            <span class="week-progress">1/7 days</span>
+                            <span class="expand-icon">▼</span>
+                        </div>
+                        <div class="week-content" id="week2">
+                            <div class="day-item">
+                                <input type="checkbox" id="w2d1" class="day-checkbox">
+                                <label for="w2d1">
+                                    <strong>Day 1:</strong> Enzymology in food processing + Lab techniques <span class="priority high">🟢</span>
+                                    <small>2 hours</small>
+                                </label>
+                            </div>
+                            <div class="day-item">
+                                <input type="checkbox" id="w2d2" class="day-checkbox">
+                                <label for="w2d2">
+                                    <strong>Day 2:</strong> Food preservation methods + HACCP principles <span class="priority high">🟢</span>
+                                    <small>2 hours</small>
+                                </label>
+                            </div>
+                            <div class="day-item">
+                                <input type="checkbox" id="w2d3" class="day-checkbox">
+                                <label for="w2d3">
+                                    <strong>Day 3:</strong> Nutrient deficiency maps + Clinical signs <span class="priority high">🟢</span>
+                                    <small>2 hours</small>
+                                </label>
+                            </div>
+                            <div class="day-item">
+                                <input type="checkbox" id="w2d4" class="day-checkbox">
+                                <label for="w2d4">
+                                    <strong>Day 4:</strong> Life-cycle nutrition: Pregnancy & lactation <span class="priority high">🟢</span>
+                                    <small>2 hours</small>
+                                </label>
+                            </div>
+                            <div class="day-item">
+                                <input type="checkbox" id="w2d5" class="day-checkbox">
+                                <label for="w2d5">
+                                    <strong>Day 5:</strong> Family Studies Ch 2: Gender role theories <span class="priority medium">🟡</span>
+                                    <small>2 hours</small>
+                                </label>
+                            </div>
+                            <div class="day-item">
+                                <input type="checkbox" id="w2d6" class="day-checkbox">
+                                <label for="w2d6">
+                                    <strong>Day 6:</strong> Paper 1 Research: Methodology types + PYQs <span class="priority high">🟢</span>
+                                    <small>2 hours</small>
+                                </label>
+                            </div>
+                            <div class="day-item">
+                                <input type="checkbox" id="w2d7" class="day-checkbox">
+                                <label for="w2d7">
+                                    <strong>Day 7:</strong> Mini-mock both papers + Error analysis + Planning <span class="priority high">🟢</span>
+                                    <small>4 hours</small>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Placeholder for more weeks -->
+                    <div class="more-weeks">
+                        <p>📝 Weeks 3-20 will be dynamically generated based on your progress...</p>
+                        <button class="btn btn--secondary" onclick="generateMoreWeeks()">Generate Remaining Weeks</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Unit Progress Section -->
+        <section id="progress" class="section">
+            <h2>📊 Unit Progress Tracker</h2>
+            <div class="units-grid" id="unitsGrid">
+                <div class="unit-card high-priority">
+                    <h4>Unit 1: Food Science & Food Service Management</h4>
+                    <div class="unit-meta">
+                        <span class="weightage">12-15 Questions</span>
+                        <span class="confidence moderate">🤔 Moderate</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 45%"></div>
+                    </div>
+                    <p class="progress-text">45% Complete</p>
+                    <div class="unit-chapters">
+                        <small>Chapters: Food chemistry, Cooking effects, Preservation, HACCP, Institutional catering</small>
+                    </div>
+                </div>
+
+                <div class="unit-card high-priority">
+                    <h4>Unit 2: Nutrition & Dietetics</h4>
+                    <div class="unit-meta">
+                        <span class="weightage">10-13 Questions</span>
+                        <span class="confidence strong">💪 Strong</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 60%"></div>
+                    </div>
+                    <p class="progress-text">60% Complete</p>
+                    <div class="unit-chapters">
+                        <small>Chapters: Macro/micronutrients, Life-cycle nutrition, Clinical diets, Public health programs</small>
+                    </div>
+                </div>
+
+                <div class="unit-card medium-priority">
+                    <h4>Unit 3: Textiles</h4>
+                    <div class="unit-meta">
+                        <span class="weightage">7-9 Questions</span>
+                        <span class="confidence weak">😰 Weak</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 20%"></div>
+                    </div>
+                    <p class="progress-text">20% Complete</p>
+                    <div class="unit-chapters">
+                        <small>Chapters: Fibre classification, Fabric construction, Finishes, Traditional Indian textiles</small>
+                    </div>
+                </div>
+
+                <div class="unit-card high-priority">
+                    <h4>Unit 7: Child/Human Development</h4>
+                    <div class="unit-meta">
+                        <span class="weightage">12-16 Questions</span>
+                        <span class="confidence moderate">🤔 Moderate</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 35%"></div>
+                    </div>
+                    <p class="progress-text">35% Complete</p>
+                    <div class="unit-chapters">
+                        <small>Chapters: Growth theories, Special needs, Adolescence, Gerontology</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Study Timer Section -->
+        <section id="timer" class="section">
+            <h2>⏰ Study Timer & Streak Tracker</h2>
+            <div class="timer-container">
+                <div class="timer-display">
+                    <div class="time-left" id="timerDisplay">02:00:00</div>
+                    <div class="timer-controls">
+                        <button class="btn btn--primary" id="startTimer">Start Session</button>
+                        <button class="btn btn--secondary" id="pauseTimer">Pause</button>
+                        <button class="btn btn--outline" id="resetTimer">Reset</button>
+                    </div>
+                    <div class="session-type">
+                        <label>Session Type:</label>
+                        <select id="sessionType" class="form-control">
+                            <option value="weekday">Weekday (2 hours)</option>
+                            <option value="sunday">Sunday (4 hours)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="streak-tracker">
+                    <h3>📈 Study Streak</h3>
+                    <div class="streak-counter">
+                        <span class="streak-number">7</span>
+                        <span class="streak-label">Day Streak</span>
+                    </div>
+                    <div class="streak-visual">
+                        🔥🔥🔥🔥🔥🔥🔥
+                    </div>
+                    <div class="weekly-reflection">
+                        <h4>Weekly Reflection</h4>
+                        <textarea class="form-control" placeholder="What went well this week? What needs improvement?"></textarea>
+                        <button class="btn btn--primary mt-8">Save Reflection</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Motivation Section -->
+        <section id="motivation" class="section">
+            <h2>🌟 Emergency Motivation Panel</h2>
+            <div class="motivation-cards">
+                <div class="motivation-card feeling-low">
+                    <h3>😔 Feeling Low?</h3>
+                    <p>Here are some gentle tasks to get back on track:</p>
+                    <ul>
+                        <li>✅ Review 5 flashcards from yesterday</li>
+                        <li>✅ Read one short chapter summary</li>
+                        <li>✅ Complete 10 easy MCQs</li>
+                        <li>✅ Watch a motivational study video (15 min)</li>
+                        <li>✅ Take a mindful walk and come back</li>
+                    </ul>
+                </div>
+
+                <div class="motivation-card confidence-booster">
+                    <h3>💪 Quick Confidence Boosters</h3>
+                    <ul>
+                        <li>🎯 "You've already completed 12% of your journey!"</li>
+                        <li>🌱 "Every expert was once a beginner"</li>
+                        <li>📚 "Knowledge is not about cramming, it's about understanding"</li>
+                        <li>⭐ "Your future self will thank you for today's effort"</li>
+                        <li>🔥 "Consistency beats perfection every time"</li>
+                    </ul>
+                </div>
+
+                <div class="motivation-card fallback-activities">
+                    <h3>🎯 Gentle Fallback Activities</h3>
+                    <ul>
+                        <li>📝 Organize your study notes</li>
+                        <li>📱 Update your progress tracker</li>
+                        <li>🎧 Listen to educational podcasts</li>
+                        <li>📊 Review your mock test analytics</li>
+                        <li>🗂️ Create mind maps for difficult topics</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mock Test Tracker -->
+        <section id="mocks" class="section">
+            <h2>📝 Mock Test Tracker</h2>
+            <div class="mock-overview">
+                <div class="mock-stats">
+                    <div class="stat-box">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label">Tests Taken</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">68%</span>
+                        <span class="stat-label">Average Score</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">+12%</span>
+                        <span class="stat-label">Improvement</span>
+                    </div>
+                </div>
+                
+                <div class="add-mock">
+                    <h4>Add New Mock Test Result</h4>
+                    <div class="mock-form">
+                        <input type="date" class="form-control" id="mockDate">
+                        <input type="number" class="form-control" placeholder="Paper 1 Score (%)" id="paper1Score">
+                        <input type="number" class="form-control" placeholder="Paper 2 Score (%)" id="paper2Score">
+                        <button class="btn btn--primary" onclick="addMockResult()">Add Result</button>
+                    </div>
+                </div>
+
+                <div class="mock-history">
+                    <h4>Recent Mock Tests</h4>
+                    <div class="mock-list" id="mockList">
+                        <div class="mock-item">
+                            <span class="mock-date">2025-07-15</span>
+                            <span class="mock-scores">Paper 1: 65% | Paper 2: 72%</span>
+                            <span class="mock-total">Total: 68.5%</span>
+                        </div>
+                        <div class="mock-item">
+                            <span class="mock-date">2025-07-08</span>
+                            <span class="mock-scores">Paper 1: 58% | Paper 2: 64%</span>
+                            <span class="mock-total">Total: 61%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Milestones -->
+        <div class="milestones">
+            <h3>🎯 Upcoming Milestones</h3>
+            <div class="milestone-item">
+                <span class="milestone-date">Aug 21, 2025</span>
+                <span class="milestone-target">Units 1-2 complete (≥ 60%)</span>
+                <span class="milestone-status on-track">On Track</span>
+            </div>
+            <div class="milestone-item">
+                <span class="milestone-date">Sep 18, 2025</span>
+                <span class="milestone-target">Units 1-5 complete (≥ 65%)</span>
+                <span class="milestone-status pending">Pending</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
